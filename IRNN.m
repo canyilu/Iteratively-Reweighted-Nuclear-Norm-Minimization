@@ -1,5 +1,18 @@
 function X = IRNN(fun,y,M,m,n,gamma,lambda_Init,lambda_rho,tol)
 
+% Written by Canyi Lu (canyilu@gmail.com)
+%
+% References: 
+%
+% Canyi Lu, Jinhui Tang, Shuicheng Yan and Zhouchen Lin,
+% Nonconvex Nonsmooth Low Rank Minimization via Iteratively Reweighted Nuclear Norm,
+% IEEE Transactions on Image Processing, vol. 25, pp. 829-839, 2016
+%
+% % Canyi Lu, Jinhui Tang, Shuicheng Yan and Zhouchen Lin,
+% Generalized Nonconvex Nonsmooth Low-Rank Minimization,
+% International Conference on Computer Vision and Pattern Recognition (CVPR), 2014
+
+
 if nargin < 6
     gamma = 1;
 end
