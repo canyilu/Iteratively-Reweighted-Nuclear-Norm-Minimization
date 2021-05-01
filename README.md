@@ -1,5 +1,8 @@
 ## IRNN: Iteratively Reweighted Nuclear Norm for Nonconvex Nonsmooth Low-rank Minimization
 
+### Introduction
+
+
 The nuclear norm is widely used as a convex surrogate of
 the rank function in compressive sensing for low rank matrix
 recovery with its applications in image recovery and signal
@@ -28,6 +31,8 @@ IRNN solves the following nonconvex nonsmooth low-rank minimization problem
 
 where <a href="https://www.codecogs.com/eqnedit.php?latex=g_\lambda:$&space;$\mathbb{R}\rightarrow\mathbb{R}^&plus;" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_\lambda:$&space;$\mathbb{R}\rightarrow\mathbb{R}^&plus;" title="g_\lambda:$ $\mathbb{R}\rightarrow\mathbb{R}^+" /></a> is continuous, concave and monotonically increasing on <a href="https://www.codecogs.com/eqnedit.php?latex=[0,\infty)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[0,\infty)" title="[0,\infty)" /></a>, and <a href="https://www.codecogs.com/eqnedit.php?latex=f" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f" title="f" /></a> has Lipschitz continuous gradient.
 
+Our work [1] is the first work which considers such a general nonconvex nonsmooth low-rank minimization problem. It is further extended to the journal version [2]. We also propose a faster solver by using generalized singular value thresholding in [3] for solving the same problem.
+
 The nonconvex function <a href="https://www.codecogs.com/eqnedit.php?latex=g_{\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{\lambda}" title="g_{\lambda}" /></a> is the nonconvex surrogate of the <a href="https://www.codecogs.com/eqnedit.php?latex=\ell_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\ell_0" title="\ell_0" /></a>-norm. Some known examples are given in Table 1 and Figure 1 below. By applying <a href="https://www.codecogs.com/eqnedit.php?latex=g_{\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{\lambda}" title="g_{\lambda}" /></a> on the singular values, <a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i=1}^mg_{\lambda}(\sigma_i(\mathbf{X}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{i=1}^mg_{\lambda}(\sigma_i(\mathbf{X}))" title="\sum_{i=1}^mg_{\lambda}(\sigma_i(\mathbf{X}))" /></a> becomes to the nonconvex surrogate function of matrix rank. See the manifolds of some nonconvex surrogates in Figure 2 below. 
 
 
@@ -44,7 +49,14 @@ The nonconvex function <a href="https://www.codecogs.com/eqnedit.php?latex=g_{\l
 </p>
 
 
-References
 
-* Nonconvex Nonsmooth Low-Rank Minimization via Iteratively Reweighted Nuclear Norm, Canyi Lu, Jinhui Tang, Shuicheng Yan, Zhouchen Lin, IEEE Transactions on Image Processing (TIP). 2016
-* Generalized Nonconvex Nonsmooth Low-Rank Minimization, Canyi Lu, Jinhui Tang, Shuicheng Yan, Zhouchen Lin, IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) 2014: 4130-4137
+### References
+<ol>
+<li> Generalized Nonconvex Nonsmooth Low-Rank Minimization, Canyi Lu, Jinhui Tang, Shuicheng Yan, Zhouchen Lin, IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) 2014: 4130-4137
+
+<li> Nonconvex Nonsmooth Low-Rank Minimization via Iteratively Reweighted Nuclear Norm, Canyi Lu, Jinhui Tang, Shuicheng Yan, Zhouchen Lin, IEEE Transactions on Image Processing (TIP). 2016
+
+<li> Generalized Singular Value Thresholding, Canyi Lu, Changbo Zhu, Chunyan Xu, Shuicheng Yan and Zhouchen Lin, AAAI Conference on Artificial Intelligence (AAAI), 2015
+  
+</ol>
+
